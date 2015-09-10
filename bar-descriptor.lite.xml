@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+
+    <id>lcom.nemory.fbmessenger.lite</id>
+
+    <name>Messenger</name>
+
+    <versionNumber>5.0.700</versionNumber>
+    <icon>
+       <image>icon.png</image>
+    </icon>
+    <splashScreens>
+       <image>splashPassport.jpg</image>
+       <image>splashQ10.jpg</image>
+       <image>splashZ10.jpg</image>
+       <image>splashZ30.jpg</image>
+    </splashScreens>
+    <platformVersion>10.2.0</platformVersion>
+
+    <buildId>1</buildId>
+
+    <description>Facebook Messenger</description>
+
+    <author>Nemory Studios</author>
+    <configuration name="Device-Debug">
+        <platformArchitecture>armle-v7</platformArchitecture>
+        <entryPointType>Qnx/Elf</entryPointType>
+
+        <asset entryPointId="Messenger" path="arm/o.le-v7-g/Messenger"
+            entry="true" type="Qnx/Elf">Messenger</asset>
+    </configuration>
+
+    <configuration name="Device-Release">
+        <platformArchitecture>armle-v7</platformArchitecture>
+        <entryPointType>Qnx/Cascades</entryPointType>
+
+        <asset entryPointId="Messenger" path="arm/o.le-v7/Messenger.so"
+            entry="true" type="Qnx/Cascades">Messenger.so</asset>
+    </configuration>
+
+    <configuration name="Device-Profile">
+        <platformArchitecture>armle-v7</platformArchitecture>
+        <entryPointType>Qnx/Elf</entryPointType>
+
+        <asset entryPointId="Messenger" path="arm-p/o.le-v7-g/Messenger"
+            entry="true" type="Qnx/Elf">Messenger</asset>
+    </configuration>
+
+    <configuration name="Simulator-Debug">
+        <platformArchitecture>x86</platformArchitecture>
+        <entryPointType>Qnx/Elf</entryPointType>
+
+        <asset entryPointId="Messenger" path="x86/o-g/Messenger"
+            entry="true" type="Qnx/Elf">Messenger</asset>
+    </configuration>
+
+    <entryPoint id="Messenger">
+        <name>Messenger</name>
+    </entryPoint>
+
+    <invoke-target id="lcom.nemory.fbmessenger.lite">
+        <invoke-target-type>application</invoke-target-type>
+        <invoke-target-name>Messenger</invoke-target-name>
+        <icon>
+            <image>icon.png</image>
+        </icon>
+        <entry-point-id>Messenger</entry-point-id>
+    </invoke-target>
+
+    <initialWindow>
+        <autoOrients>true</autoOrients>
+        <systemChrome>none</systemChrome>
+    </initialWindow>
+
+
+    <asset path="assets">assets</asset>
+	<asset public="true" path="hubassets">hubassets</asset>
+    <asset path="translations" dest="qm">
+        <include name="*.qm" />
+    </asset>
+    <asset path="assets/media/images/icons/icon.png">icon.png</asset>
+    <asset path="assets/media/images/splash/splashPassport.jpg">splashPassport.jpg</asset>
+    <asset path="assets/media/images/splash/splashQ10.jpg">splashQ10.jpg</asset>
+    <asset path="assets/media/images/splash/splashZ10.jpg">splashZ10.jpg</asset>
+    <asset path="assets/media/images/splash/splashZ30.jpg">splashZ30.jpg</asset>
+
+    <permission>post_notification</permission>
+    <permission system="true">run_native</permission>
+    <permission>access_internet</permission>
+    <permission>run_when_backgrounded</permission>
+    <permission>access_led_control</permission>
+    <permission>post_notification</permission>
+    <permission>read_device_identifying_information</permission>
+    <permission>bbm_connect</permission>
+    <permission>access_shared</permission>
+    <permission>record_audio</permission>
+    <permission>access_location_services</permission>
+    
+    <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib" />
+    <env var="CASCADES_THEME" value="default?primaryColor=0x666666&amp;primaryBase=0x000000"/>
+
+</qnx>

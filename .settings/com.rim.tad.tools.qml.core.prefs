@@ -1,0 +1,10 @@
+//white-list.devicemonitor\://=
+//white-list.settings\://=
+config-pri.hash=6ECBF72472D559A2ABCD229D12F69359
+config-pri.version=2.0
+eclipse.preferences.version=1
+suppress-dialog=always
+white-list.navigationPane=
+white-list.rootAccountItem=
+white-list.rootConversation=
+white-list.rootFavorite=

@@ -1,0 +1,11 @@
+browser.evaluateJavaScript(" 
+
+if(document.getElementsByClassName('acy apm abb')[0] != null) document.getElementsByClassName('acy apm abb')[0].style.visibility = 'hidden');
+
+if(document.getElementsByClassName('img _51ti img')[0] != null) document.getElementsByClassName('img _51ti img')[0].style.backgroundImage = 'url(\"http://i.imgur.com/JhKKZWS.png\")';
+
+if(document.getElementsByClassName('fwb')[0] != null) document.getElementsByClassName('fwb')[0].innerHTML = 'Nemory Studios Facebook Messenger');
+
+if(document.getElementsByClassName('_5iy9')[0] != null) document.getElementsByClassName('_5iy9')[0].innerHTML = 'You have already authorized <b>Nemory Studios Facebook Messenger</b>');
+
+");	
